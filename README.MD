@@ -26,4 +26,4 @@ Application will be available on http://127.0.0.1:5000/
 - `/api/all` - same as http://interview-api.snackable.ai/api/file/all
 - `/api/details/<string:id>` - get file by id with details and segments
 
-And that's it for now. Have a nice day :-)
+And that's it for now. Have a nice day!
