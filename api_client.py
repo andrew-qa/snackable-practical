@@ -13,7 +13,7 @@ class InterviewAPI:
         
         all_files = self.all_files()
         for file in all_files:
-            if file['fileId'] == id and file['processingStatus'] != 'FINISHED':
+            if file['fileId'] == id and file['processingStatus'] == 'FINISHED':
                 return requests.get(url).json()
         return None
 
