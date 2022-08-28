@@ -20,6 +20,7 @@ def before_first_request():
             all_files = client.all_files()
             for file in all_files:
                 file_id = file['fileId']
+                # “PROCESSING” or “FAILED” files will not be stored in the temporary directory.
                 if not is_exists(os.path.join(temp_dir.name, file_id)):
                     print("Polling status for file: {}".format(file_id))
                     file_details = client.file_by_id(file_id)
