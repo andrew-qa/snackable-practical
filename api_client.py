@@ -10,7 +10,12 @@ class InterviewAPI:
 
     def file_by_id(self, id):
         url = self.base_url + 'file/details/' + id
-        return requests.get(url).json()
+        
+        all_files = self.all_files()
+        for file in all_files:
+            if file['fileId'] == id and file['processingStatus'] != 'FINISHED':
+                return requests.get(url).json()
+        return None
 
     def segments_by_id(self, id):
         url = self.base_url + 'file/segments/' + id
