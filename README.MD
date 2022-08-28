@@ -14,7 +14,7 @@ input parameter.
 # How to Run
 
 This is python application, so `python3` should be installed on the machine in order to run app. 
-Then execute following command to install dependencies and run app:
+Then execute following commands to install dependencies and run app:
 ```
 pip3 install -r requirements.txt
 make run
